@@ -23,7 +23,7 @@ WSL:Ubuntu
 
 
 
-v0.3
+## v0.3
 
 Tikslas:
     0.3 versija skirta palyginti C++ kalbos duomenų struktūrų list ir vector spartą apdorojant didelius kiekius duomenų.
@@ -141,7 +141,7 @@ Iš testavimo galima matyti, kad list struktūra atlieka operacijas kaip rikiavi
 
 
 
-v1.0 :
+## v1.0 :
 
 Visi testai daryti su 100000 įrašų.
 
@@ -171,3 +171,31 @@ o List O(1). Antra strategija naudojant List greičiausia
         List:
             konteinerio atveju, kviečiama funkcija skirstymas_pagal_paz_list, kuri ištrina studentus su <5 vidurkiu iš studentai list ir perkelia juos į kitą  list zem_lyg
         Rūšiavimo laikas: 0.025946 s
+
+## v1.1 :
+
+Struct versija:
+    100000 Studentų :
+        Failų nuskaitymas: 0.860554 s
+        Rikiavimas pagal pažymius:  0.22768 s
+        Studentų rūšiavimas: 0.0929735s
+        Duomenų įrašymas į failus: 0.175444 s
+
+    1000000 Studentų :
+        Failų nuskaitymas:          0.86055 s || -O1  1.45609 s  || -O2 1.40518 s  || -O3 1.40568 s
+        Rikiavimas pagal pažymius:  0.22768 s || -O1  0.31687 s  || -O2 0.308264 s || -O3 0.266457 s
+        Studentų rūšiavimas:        0.09297 s || -O1  0.49551 s  || -O2 0.503482 s || -O3 0.508501 s
+        Duomenų įrašymas į failus:  0.17544 s || -O1  1.47687 s  || -O2 1.57545 s  || -O3 1.47876 s
+
+Class versija:
+    100000 Studentų :
+        Failų nuskaitymas: 3.98689 s
+        Rikiavimas pagal pažymius: 2.64623 s
+        Studentų rūšiavimas:  1.16904 s
+        Duomenų įrašymas į failus: 2.01999 s
+
+    1000000 Studentų :
+        Failų nuskaitymas:          3.94216 s || -O1  1.6346 s   || -O2 1.54307 s  || -O3 1.42303 s
+        Rikiavimas pagal pažymius:  3.83705 s || -O1  0.772583 s || -O2 0.726094 s || -O3 0.699226 s
+        Studentų rūšiavimas:        0.95569 s || -O1  0.555033 s || -O2 0.588292 s || -O3 0.526771 s
+        Duomenų įrašymas į failus:  2.02929 s || -O1  1.54024 s  || -O2 1.53029 s  || -O3 1.49763 s

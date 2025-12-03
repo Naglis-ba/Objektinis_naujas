@@ -2,6 +2,8 @@
 #include <string>
 #include <vector>
 #include <iostream>
+#include <fstream>
+#include <sstream>
 
 class Studentas {
 private:
@@ -11,16 +13,17 @@ private:
     int egz_;
     double galVid_;
     double galMed_;
+    
+    // Private helper methods
+    double skaiciuotiVidurki();
+    double skaiciuotiMediana();
 
 public:
     // Constructors
     Studentas();  // Default constructor
     Studentas(const std::string& vardas, const std::string& pavarde);
-    Studentas(std::string failo_vardas);
     Studentas(std::istream& in);
-    ~Studentas(){
-
-    }  // Destructor
+    ~Studentas(); // Destructor
 
     // Getters
     inline std::string Vardas() const { return vardas_; }
@@ -46,6 +49,9 @@ public:
     void IvestiPazymius();  // Input grades manually
     void GeneruotiAtsitiktinai();  // Generate random grades
     void PrintInfo() const;  // Print student info
+
+    // Static factory method for reading from file
+    static std::vector<Studentas> ReadFromFile(const std::string& filename);
 
     // Comparison operators (for sorting)
     bool operator>(const Studentas& other) const { return galVid_ > other.galVid_; }

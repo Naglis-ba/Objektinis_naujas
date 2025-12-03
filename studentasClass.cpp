@@ -7,6 +7,15 @@
 #include <algorithm>
 #include <bits/stdc++.h>
 
+using std::cout;
+using std::cin;
+using std::string;
+using std::vector;
+
+
+Studentas::~Studentas() {
+    paz_.clear();
+}
 
 Studentas::Studentas(){
     int sum=0, n, m;
@@ -16,6 +25,11 @@ Studentas::Studentas(){
     std::cout << "Ar generuoti pazymius atsitiktinai? (1 - Taip, 0 - Ne): ";
     int gen;
     std::cin >> gen;
+    
+    string paz_str;
+    int laik_paz;
+    int tusciu_eiluciu = 0;
+    
     switch (gen) {
         case 1:
             for (int i = 0; i < n; i++) {
@@ -23,13 +37,10 @@ Studentas::Studentas(){
             }
             egz_ = rand() % 10 + 1;
             galVid_ = egz_ * 0.6 + (std::accumulate(paz_.begin(), paz_.end(), 0.0) / paz_.size()) * 0.4;
-            galMed_ = skaiciuotiMediana(paz_) * 0.4 + egz_ * 0.6;
+            galMed_ = skaiciuotiMediana() * 0.4 + egz_ * 0.6;
             break;
         case 0:
             cout << "Iveskite namu darbu pazymius (du ENTER is eiles baigia ivedima):\n";
-            string paz_str;
-            int laik_paz;
-            int tusciu_eiluciu = 0;
             paz_.clear();
             while (true) {
                 std::getline(cin, paz_str);
@@ -37,13 +48,17 @@ Studentas::Studentas(){
                     tusciu_eiluciu++;
                     if (tusciu_eiluciu == 2) break;
                     continue;
+                }
+                tusciu_eiluciu = 0;
+                try {
+                    laik_paz = stoi(paz_str);
+                    paz_.push_back(laik_paz);
+                } catch (...) { cout << "Iveskite skaiciu arba ENTER.\n"; }
             }
-            tusciu_eiluciu = 0;
-            try {
-                laik_paz = stoi(paz_str);
-                paz_.push_back(laik_paz);
-            } catch (...) { cout << "Iveskite skaiciu arba ENTER.\n"; }
-            }
+            std::cout << "Egzamino ivertinimas: ";
+            std::cin >> egz_;
+            // Calculate final grades
+            SkaiciuotiGalutinius();
             break;
         default:
             std::cout << "Neteisinga ivestis." << std::endl;
@@ -52,7 +67,6 @@ Studentas::Studentas(){
 }
 
 Studentas::Studentas(std::istream& in){
-
     in >> vardas_ >> pavarde_;
     std::vector<int> laik_paz;
     int x;
@@ -61,12 +75,11 @@ Studentas::Studentas(std::istream& in){
     egz_ = laik_paz.back();
     laik_paz.pop_back();
     paz_ = move(laik_paz);
-    SkaiciuotiVidurkius();
-
+    SkaiciuotiGalutinius();
 }
 
-std::vector<Studentas> Studentas::Studentas(string failo_vardas){
-
+// Static factory function to read students from file
+std::vector<Studentas> Studentas::ReadFromFile(const std::string& failo_vardas){
     auto start = std::chrono::high_resolution_clock::now();
     std::vector<Studentas> studentai;
     std::ifstream in(failo_vardas);
@@ -82,14 +95,14 @@ std::vector<Studentas> Studentas::Studentas(string failo_vardas){
         Studentas stud(iss);
         studentai.push_back(std::move(stud));
     }
-    return studentai;
+    in.close();
     auto end = std::chrono::high_resolution_clock::now();
     std::chrono::duration<double> diff = end - start;
     std::cout << "Nuskaitymas uztruko: " << diff.count() << " s\n";
-
+    return studentai;
 }
 
-void Studentas::SkaiciuotiVidurkius() {
+void Studentas::SkaiciuotiGalutinius() {
     double vid = skaiciuotiVidurki();
     galVid_ = 0.4 * vid + 0.6 * egz_;
     double med = skaiciuotiMediana();
