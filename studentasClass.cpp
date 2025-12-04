@@ -78,7 +78,6 @@ Studentas::Studentas(std::istream& in){
     SkaiciuotiGalutinius();
 }
 
-// Static factory function to read students from file
 std::vector<Studentas> Studentas::ReadFromFile(const std::string& failo_vardas){
     auto start = std::chrono::high_resolution_clock::now();
     std::vector<Studentas> studentai;
@@ -100,6 +99,32 @@ std::vector<Studentas> Studentas::ReadFromFile(const std::string& failo_vardas){
     std::chrono::duration<double> diff = end - start;
     std::cout << "Nuskaitymas uztruko: " << diff.count() << " s\n";
     return studentai;
+}
+Studentas::Studentas(const Studentas& other):
+      vardas_(other.vardas_), 
+      pavarde_(other.pavarde_), 
+      paz_(other.paz_),  // Vector copied here
+      egz_(other.egz_), 
+      galVid_(other.galVid_), 
+      galMed_(other.galMed_) {
+    std::cout << "Copy constructor called for: " << vardas_ << " " << pavarde_ << "\n";
+}
+
+Studentas& Studentas::operator=(const Studentas& other) {
+    if (this == &other) {
+        return *this;
+    }
+    
+    vardas_ = other.vardas_;
+    pavarde_ = other.pavarde_;
+    paz_ = other.paz_;  
+    egz_ = other.egz_;
+    galVid_ = other.galVid_;
+    galMed_ = other.galMed_;
+    
+    std::cout << "Copy assignment operator called for: " << vardas_ << " " << pavarde_ << "\n";
+    
+    return *this;
 }
 
 void Studentas::SkaiciuotiGalutinius() {

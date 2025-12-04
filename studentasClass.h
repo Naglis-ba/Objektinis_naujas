@@ -39,6 +39,7 @@ public:
     void SetEgz(int egz) { egz_ = egz; }
     void SetGalVid(double vid) { galVid_ = vid; }
     void SetGalMed(double med) { galMed_ = med; }
+    
 
     // Methods for grades
     void AddGrade(int grade) { paz_.push_back(grade); }
