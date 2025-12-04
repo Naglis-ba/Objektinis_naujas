@@ -1,29 +1,31 @@
 #pragma once
+#include "zmogus.h"
 #include <string>
 #include <vector>
 #include <iostream>
 #include <fstream>
 #include <sstream>
 
-class Studentas {
+class Studentas : public Zmogus {
 private:
-    std::string vardas_;
-    std::string pavarde_;
     std::vector<int> paz_;
     int egz_;
     double galVid_;
     double galMed_;
     
-    // Private helper methods
     double skaiciuotiVidurki();
     double skaiciuotiMediana();
 
 public:
     // Constructors
-    Studentas();  // Default constructor
+    Studentas();
     Studentas(const std::string& vardas, const std::string& pavarde);
     Studentas(std::istream& in);
+    
+    // Rule of Three
     ~Studentas(); // Destructor
+    Studentas(const Studentas& other); // Copy constructor
+    Studentas& operator=(const Studentas& other); // Copy assignment operator
 
     // Getters
     inline std::string Vardas() const { return vardas_; }
@@ -39,17 +41,17 @@ public:
     void SetEgz(int egz) { egz_ = egz; }
     void SetGalVid(double vid) { galVid_ = vid; }
     void SetGalMed(double med) { galMed_ = med; }
-    
+
 
     // Methods for grades
     void AddGrade(int grade) { paz_.push_back(grade); }
     void ClearGrades() { paz_.clear(); }
 
     // Utility methods
-    void SkaiciuotiGalutinius();  // Calculate final grade and median
-    void IvestiPazymius();  // Input grades manually
-    void GeneruotiAtsitiktinai();  // Generate random grades
-    void PrintInfo() const;  // Print student info
+    void SkaiciuotiGalutinius();  
+    void IvestiPazymius();  
+    void GeneruotiAtsitiktinai();  
+    void PrintInfo() const;
 
     // Static factory method for reading from file
     static std::vector<Studentas> ReadFromFile(const std::string& filename);

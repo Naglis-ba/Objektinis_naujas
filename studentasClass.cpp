@@ -100,15 +100,14 @@ std::vector<Studentas> Studentas::ReadFromFile(const std::string& failo_vardas){
     std::cout << "Nuskaitymas uztruko: " << diff.count() << " s\n";
     return studentai;
 }
-Studentas::Studentas(const Studentas& other):
-      vardas_(other.vardas_), 
-      pavarde_(other.pavarde_), 
-      paz_(other.paz_),  // Vector copied here
-      egz_(other.egz_), 
-      galVid_(other.galVid_), 
-      galMed_(other.galMed_) {
-    std::cout << "Copy constructor called for: " << vardas_ << " " << pavarde_ << "\n";
-}
+Studentas::Studentas(const Studentas& other)
+    : Zmogus(other.vardas_, other.pavarde_), 
+      paz_(other.paz_),
+      egz_(other.egz_),
+      galVid_(other.galVid_),
+      galMed_(other.galMed_){}
+
+
 
 Studentas& Studentas::operator=(const Studentas& other) {
     if (this == &other) {
@@ -117,12 +116,11 @@ Studentas& Studentas::operator=(const Studentas& other) {
     
     vardas_ = other.vardas_;
     pavarde_ = other.pavarde_;
-    paz_ = other.paz_;  
+    
+    paz_ = other.paz_;
     egz_ = other.egz_;
     galVid_ = other.galVid_;
     galMed_ = other.galMed_;
-    
-    std::cout << "Copy assignment operator called for: " << vardas_ << " " << pavarde_ << "\n";
     
     return *this;
 }
@@ -150,4 +148,11 @@ double Studentas::skaiciuotiMediana() {
         return (paz_[n/2 - 1] + paz_[n/2]) / 2.0;
     else
         return paz_[n/2];
+}
+
+void Studentas::PrintInfo() const {
+    std::cout << std::setw(20) << std::left << vardas_
+              << std::setw(20) << std::left << pavarde_
+              << std::setw(15) << std::fixed << std::setprecision(2) << galVid_
+              << std::setw(15) << std::fixed << std::setprecision(2) << galMed_;
 }

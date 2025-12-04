@@ -127,11 +127,12 @@ void Isvedimas(const vector<Studentas> Studentu_sarasas,const vector<Studentas> 
 
 
 int main() {
-     srand(static_cast<unsigned>(time(0)));
+    srand(static_cast<unsigned>(time(0)));
     auto start = std::chrono::high_resolution_clock::now();
     vector<Studentas> Studentu_sarasas;
     vector<Studentas> zem_lyg;
     vector<Studentas> aukst_lyg;
+    // Zmogus a;
 
     Suvedimas(Studentu_sarasas);
 
