@@ -1,0 +1,152 @@
+\chapter{Įdiegimo Gidas}
+\hypertarget{md__2home_2nagli_2Objektinis__naujas_2Objektinis_2INSTALLATION}{}\label{md__2home_2nagli_2Objektinis__naujas_2Objektinis_2INSTALLATION}\index{Įdiegimo Gidas@{Įdiegimo Gidas}}
+\label{md__2home_2nagli_2Objektinis__naujas_2Objektinis_2INSTALLATION_autotoc_md0}%
+\Hypertarget{md__2home_2nagli_2Objektinis__naujas_2Objektinis_2INSTALLATION_autotoc_md0}%
+ \hypertarget{md__2home_2nagli_2Objektinis__naujas_2Objektinis_2INSTALLATION_autotoc_md1}{}\doxysubsection{\texorpdfstring{Reikalavimai}{Reikalavimai}}\label{md__2home_2nagli_2Objektinis__naujas_2Objektinis_2INSTALLATION_autotoc_md1}
+
+\begin{DoxyItemize}
+\item CMake 3.\+15 ar naujesnis
+\end{DoxyItemize}\hypertarget{md__2home_2nagli_2Objektinis__naujas_2Objektinis_2INSTALLATION_autotoc_md2}{}\doxysection{\texorpdfstring{Įdiegimo Gidas (v1.\+0 -\/ minimalus pakeitimas)}{Įdiegimo Gidas (v1.0 - minimalus pakeitimas)}}\label{md__2home_2nagli_2Objektinis__naujas_2Objektinis_2INSTALLATION_autotoc_md2}
+Šis failas aprašo, kaip sukompiliuoti ir paleisti programą iš šio commit\textquotesingle{}o, kuris skirtas pateiktiems vertinimo reikalavimams\+:
+
+
+\begin{DoxyItemize}
+\item Pilnai veikianti programa v1.\+0 (šaltinio kodas)\+: {\ttfamily main.\+cpp}, {\ttfamily funkcijos.\+cpp}, {\ttfamily funkcijos.\+h}, {\ttfamily studentas.\+h}.
+\item Build konfigūracija\+: {\ttfamily CMake\+Lists.\+txt}.
+\item Diegimo ir paleidimo instrukcija\+: šiame faile.
+\item Tyrimo/aprašymo medžiaga\+: {\ttfamily README.\+md} (strategijų tyrimas, lentelės, nuotraukos).
+\end{DoxyItemize}
+
+Pastaba\+: dideli sugeneruoti duomenų failai ({\ttfamily studentai\texorpdfstring{$\ast$}{*}.txt}, {\ttfamily rez.\+txt}, {\ttfamily kietiakai.\+txt}, {\ttfamily vargsiukai.\+txt}) ir {\ttfamily build/} katalogas nėra įtraukti į commit\textquotesingle{}ą — jie turi būti laikomi lokaliai arba generuojami pagal poreikį.
+
+cd build
+
+
+\begin{DoxyItemize}
+\item CMake 3.\+15+ (rekomenduojama)
+\item GNU g++ arba kitoks C++17 suderinamas kompiliatorius (g++ 9+ rekomenduojama)
+\item Linux arba WSL
+\end{DoxyItemize}
+
+cmake ..\hypertarget{md__2home_2nagli_2Objektinis__naujas_2Objektinis_2INSTALLATION_autotoc_md3}{}\doxysubsection{\texorpdfstring{Greitas ir patikimas build (rekomenduojamas)}{Greitas ir patikimas build (rekomenduojamas)}}\label{md__2home_2nagli_2Objektinis__naujas_2Objektinis_2INSTALLATION_autotoc_md3}
+Iš projekto šaknies (kur yra {\ttfamily CMake\+Lists.\+txt})\+:
+
+Arba nurodydami statybos tipą\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cmake\ -\/DCMAKE\_BUILD\_TYPE=Release\ ..}
+
+\end{DoxyCode}
+\hypertarget{md__2home_2nagli_2Objektinis__naujas_2Objektinis_2INSTALLATION_autotoc_md4}{}\doxysection{\texorpdfstring{paleiskite programą}{paleiskite programą}}\label{md__2home_2nagli_2Objektinis__naujas_2Objektinis_2INSTALLATION_autotoc_md4}
+./build/bin/main 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Ši\ seka:}
+\DoxyCodeLine{-\/\ sukuria\ \`{}build`\ katalogą\ (CMake\ out-\/of-\/source\ build)}
+\DoxyCodeLine{-\/\ sukonfigūruoja\ projektą\ su\ \`{}Release`\ tipu\ (optimizations)}
+\DoxyCodeLine{-\/\ sugeneruoja\ binarinį\ failą\ \`{}build/bin/main`}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\#\#\#\ Alternatyva:\ konfigūracija\ be\ \`{}-\/S/-\/B`}
+
+\end{DoxyCode}
+ bash mkdir build \&\& cd build cmake .. -\/DCMAKE\+\_\+\+BUILD\+\_\+\+TYPE=Release cmake --build . -- -\/j ./bin/main 
+\begin{DoxyCode}{0}
+
+\end{DoxyCode}
+\hypertarget{md__2home_2nagli_2Objektinis__naujas_2Objektinis_2INSTALLATION_autotoc_md5}{}\doxysubsubsection{\texorpdfstring{Diegimas (neprivaloma)}{Diegimas (neprivaloma)}}\label{md__2home_2nagli_2Objektinis__naujas_2Objektinis_2INSTALLATION_autotoc_md5}
+Norint įdiegti sistemos ribose (pvz. {\ttfamily /usr/local})\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{make}
+
+\end{DoxyCode}
+
+
+Konkretiems tikslams statyti\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Po\ įdiegimo\ galite\ pridėti\ \`{}\$HOME/.local/bin`\ į\ \`{}PATH`\ jei\ pasirinkote\ vartotojo\ prefix.}
+\DoxyCodeLine{}
+\DoxyCodeLine{make\ main\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Statykite\ pagrindinę\ programą}
+\DoxyCodeLine{}
+\DoxyCodeLine{-\/\ \`{}main.cpp`,\ \`{}funkcijos.cpp`,\ \`{}funkcijos.h`,\ \`{}studentas.h`}
+\DoxyCodeLine{-\/\ \`{}CMakeLists.txt`}
+\DoxyCodeLine{-\/\ \`{}README.md`\ (turi\ apimti\ strategijų\ tyrimą,\ lenteles\ ir\ nuotraukas)}
+\DoxyCodeLine{-\/\ \`{}INSTALLATION.md`\ (šis\ failas)}
+\DoxyCodeLine{-\/\ \`{}.gitignore`\ (sustabdo\ didelius/automatiškai\ sugeneruotus\ failus\ iš\ įtraukimo)}
+\DoxyCodeLine{-\/\ \`{}docs/`\ arba\ \`{}assets/`\ su\ benchmark\ nuotraukomis,\ jeigu\ naudojate\ jas\ README}
+\DoxyCodeLine{}
+\DoxyCodeLine{./bin/main}
+\DoxyCodeLine{}
+\DoxyCodeLine{\#\#\#\ Patarimai\ demonstracijai}
+\DoxyCodeLine{-\/\ Paruoškite\ trumpą\ scenarijų\ (1-\/2\ komandų\ seką),\ kurį\ parodysite\ vertintojui:}
+\DoxyCodeLine{\ \ \ \ 1.\ \`{}mkdir\ build\ \&\&\ cmake\ -\/S\ .\ -\/B\ build\ -\/DCMAKE\_BUILD\_TYPE=Release\ \&\&\ cmake\ -\/-\/build\ build\ -\/-\/\ -\/j`}
+\DoxyCodeLine{\ \ \ \ 2.\ \`{}./build/bin/main`\ (pademonstruokite\ meniu\ ir\ pagrindines\ funkcijas)}
+\DoxyCodeLine{}
+\DoxyCodeLine{./bin/main}
+\DoxyCodeLine{}
+\DoxyCodeLine{\#\#\#\ Troubleshooting}
+\DoxyCodeLine{}
+\DoxyCodeLine{-\/\ Jei\ trūksta\ \`{}cmake`:}
+
+\end{DoxyCode}
+ bash sudo apt install cmake \# Debian/\+Ubuntu sudo dnf install cmake \# Fedora 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{-\/\ Jei\ trūksta\ g++:}
+
+\end{DoxyCode}
+ bash sudo apt install g++ \# Debian/\+Ubuntu 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Jeigu\ kyla\ specifinių\ problemų,\ aprašykite\ klaidos\ tekstą\ ir\ aš\ padėsiu.}
+
+\end{DoxyCode}
+\hypertarget{md__2home_2nagli_2Objektinis__naujas_2Objektinis_2INSTALLATION_autotoc_md6}{}\doxysubsubsection{\texorpdfstring{Statybos išvestis}{Statybos išvestis}}\label{md__2home_2nagli_2Objektinis__naujas_2Objektinis_2INSTALLATION_autotoc_md6}
+
+\begin{DoxyItemize}
+\item Pagrindinė programa\+: {\ttfamily bin/main}
+\item Benchmark\textquotesingle{}ai\+: {\ttfamily bin/benchmarks/}
+\item Dokumentacija\+: {\ttfamily share/doc/\+Objektinis/} arba {\ttfamily docs/} po įdiegimo
+\end{DoxyItemize}\hypertarget{md__2home_2nagli_2Objektinis__naujas_2Objektinis_2INSTALLATION_autotoc_md7}{}\doxysubsubsection{\texorpdfstring{Greitas Build ir Paleidimas}{Greitas Build ir Paleidimas}}\label{md__2home_2nagli_2Objektinis__naujas_2Objektinis_2INSTALLATION_autotoc_md7}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{mkdir\ build\ \&\&\ cd\ build}
+\DoxyCodeLine{cmake\ ..\ \&\&\ cmake\ -\/-\/build\ .}
+\DoxyCodeLine{./bin/main}
+
+\end{DoxyCode}
+
+
+\DoxyHorRuler{0}
+\hypertarget{md__2home_2nagli_2Objektinis__naujas_2Objektinis_2INSTALLATION_autotoc_md9}{}\doxysubsection{\texorpdfstring{Troubleshooting}{Troubleshooting}}\label{md__2home_2nagli_2Objektinis__naujas_2Objektinis_2INSTALLATION_autotoc_md9}
+\hypertarget{md__2home_2nagli_2Objektinis__naujas_2Objektinis_2INSTALLATION_autotoc_md10}{}\doxysubsubsection{\texorpdfstring{CMake not found}{CMake not found}}\label{md__2home_2nagli_2Objektinis__naujas_2Objektinis_2INSTALLATION_autotoc_md10}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\#\ Ubuntu/Debian}
+\DoxyCodeLine{sudo\ apt\ install\ cmake}
+\DoxyCodeLine{}
+\DoxyCodeLine{\#\ Fedora/RHEL}
+\DoxyCodeLine{sudo\ dnf\ install\ cmake}
+\DoxyCodeLine{}
+\DoxyCodeLine{\#\ macOS\ (if\ applicable)}
+\DoxyCodeLine{brew\ install\ cmake}
+
+\end{DoxyCode}
+\hypertarget{md__2home_2nagli_2Objektinis__naujas_2Objektinis_2INSTALLATION_autotoc_md11}{}\doxysubsubsection{\texorpdfstring{C++17 compiler not found}{C++17 compiler not found}}\label{md__2home_2nagli_2Objektinis__naujas_2Objektinis_2INSTALLATION_autotoc_md11}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\#\ Ubuntu/Debian}
+\DoxyCodeLine{sudo\ apt\ install\ g++-\/9\ \#\ or\ newer}
+\DoxyCodeLine{}
+\DoxyCodeLine{\#\ Fedora/RHEL}
+\DoxyCodeLine{sudo\ dnf\ install\ gcc-\/c++}
+
+\end{DoxyCode}
+\hypertarget{md__2home_2nagli_2Objektinis__naujas_2Objektinis_2INSTALLATION_autotoc_md12}{}\doxysubsubsection{\texorpdfstring{Build fails with "{}cannot find -\/l"{}}{Build fails with "cannot find -l"}}\label{md__2home_2nagli_2Objektinis__naujas_2Objektinis_2INSTALLATION_autotoc_md12}
+Make sure all dependencies are installed and you\textquotesingle{}re building from the correct directory.\hypertarget{md__2home_2nagli_2Objektinis__naujas_2Objektinis_2INSTALLATION_autotoc_md13}{}\doxysubsubsection{\texorpdfstring{Permission denied when installing}{Permission denied when installing}}\label{md__2home_2nagli_2Objektinis__naujas_2Objektinis_2INSTALLATION_autotoc_md13}
+Use {\ttfamily sudo} or specify a user-\/writable prefix\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cmake\ -\/-\/install\ .\ -\/-\/prefix\ \string~/.local}
+\DoxyCodeLine{export\ PATH=\$HOME/.local/bin:\$PATH}
+
+\end{DoxyCode}
+ 

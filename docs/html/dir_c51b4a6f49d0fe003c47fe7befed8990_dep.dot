@@ -1,0 +1,16 @@
+digraph "/home/nagli/Objektinis_naujas/Objektinis/CMakeFiles/Objektinis_v1.0.dir"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  compound=true
+  subgraph clusterdir_017ad5e908c41501f6a06b5119b37293 {
+    graph [ bgcolor="#edf0f7", pencolor="grey25", label="CMakeFiles", fontname=Helvetica,fontsize=10 style="filled,dashed", URL="dir_017ad5e908c41501f6a06b5119b37293.html",tooltip=""]
+  subgraph clusterdir_c51b4a6f49d0fe003c47fe7befed8990 {
+    graph [ bgcolor="#edf0f7", pencolor="grey25", label="", fontname=Helvetica,fontsize=10 style="filled,bold", URL="dir_c51b4a6f49d0fe003c47fe7befed8990.html",tooltip=""]
+    dir_c51b4a6f49d0fe003c47fe7befed8990 [shape=plaintext, label="Objektinis_v1.0.dir"];
+  dir_d085d13b0ca080c5cacbeac8cb7997e5 [label="src", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_d085d13b0ca080c5cacbeac8cb7997e5.html",tooltip=""];
+  }
+  }
+}

@@ -1,0 +1,34 @@
+\doxysection{zmogus.\+h}
+\hypertarget{zmogus_8h_source}{}\label{zmogus_8h_source}\index{/home/nagli/Objektinis\_naujas/Objektinis/includeClass/zmogus.h@{/home/nagli/Objektinis\_naujas/Objektinis/includeClass/zmogus.h}}
+\mbox{\hyperlink{zmogus_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classZmogus}{Zmogus}}\ \{}
+\DoxyCodeLine{00016\ \textcolor{keyword}{protected}:\ }
+\DoxyCodeLine{00017\ \ \ \ \ std::string\ vardas\_;}
+\DoxyCodeLine{00018\ \ \ \ \ std::string\ pavarde\_;}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ \ \ \ \ }
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{classZmogus}{Zmogus}}(\textcolor{keyword}{const}\ std::string\&\ vardas\ =\ \textcolor{stringliteral}{"{}"{}},\ \textcolor{keyword}{const}\ std::string\&\ pavarde\ =\ \textcolor{stringliteral}{"{}"{}})}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ :\ vardas\_(vardas),\ pavarde\_(pavarde)\ \{\}}
+\DoxyCodeLine{00024\ \ \ \ \ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classZmogus}{\string~Zmogus}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00026\ \ \ \ \ }
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ PrintInfo()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00029\ \ \ \ \ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{comment}{//\ Getters}}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{virtual}\ std::string\ GetVardas()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ vardas\_;\ \}}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{virtual}\ std::string\ GetPavarde()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ pavarde\_;\ \}}
+\DoxyCodeLine{00033\ \ \ \ \ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{comment}{//\ Setters}}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ SetVardas(\textcolor{keyword}{const}\ std::string\&\ vardas)\ \{\ vardas\_\ =\ vardas;\ \}}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ SetPavarde(\textcolor{keyword}{const}\ std::string\&\ pavarde)\ \{\ pavarde\_\ =\ pavarde;\ \}}
+\DoxyCodeLine{00037\ \};}
+
+\end{DoxyCode}

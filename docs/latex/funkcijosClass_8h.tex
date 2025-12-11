@@ -1,0 +1,254 @@
+\doxysection{/home/nagli/\+Objektinis\+\_\+naujas/\+Objektinis/include\+Class/funkcijos\+Class.h File Reference}
+\hypertarget{funkcijosClass_8h}{}\label{funkcijosClass_8h}\index{/home/nagli/Objektinis\_naujas/Objektinis/includeClass/funkcijosClass.h@{/home/nagli/Objektinis\_naujas/Objektinis/includeClass/funkcijosClass.h}}
+
+
+Pagalbinės funkcijos studentų pažymių valdymo sistemai class versijai.  
+
+
+{\ttfamily \#include "{}studentas\+Class.\+h"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$type\+\_\+traits$>$}\newline
+{\ttfamily \#include $<$list$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include $<$limits$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+Include dependency graph for funkcijos\+Class.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{funkcijosClass_8h_a8cafb008d843cc579f705bec204f4b8f}\label{funkcijosClass_8h_a8cafb008d843cc579f705bec204f4b8f} 
+void {\bfseries Sort} (std\+::vector$<$ int $>$ \&arr)
+\item 
+\Hypertarget{funkcijosClass_8h_a9c2bfa23481e31c35d078c463625756a}\label{funkcijosClass_8h_a9c2bfa23481e31c35d078c463625756a} 
+double {\bfseries skaiciuoti\+Vidurki} (const std\+::vector$<$ int $>$ \&paz)
+\item 
+\Hypertarget{funkcijosClass_8h_a990fc0c230570b3372404bc4f94d857e}\label{funkcijosClass_8h_a990fc0c230570b3372404bc4f94d857e} 
+double {\bfseries skaiciuoti\+Mediana} (std\+::vector$<$ int $>$ paz)
+\item 
+\Hypertarget{funkcijosClass_8h_a338bdee692d97aa887f8946599a1552b}\label{funkcijosClass_8h_a338bdee692d97aa887f8946599a1552b} 
+void {\bfseries Skaiciuoti\+Galutinius} (\mbox{\hyperlink{structStudentas}{Studentas}} \&stud)
+\item 
+\Hypertarget{funkcijosClass_8h_a7b487dddd392be78a5694ffe0bc5a4d8}\label{funkcijosClass_8h_a7b487dddd392be78a5694ffe0bc5a4d8} 
+void {\bfseries generuoti\+Atsitiktinai} (\mbox{\hyperlink{structStudentas}{Studentas}} \&stud)
+\item 
+\Hypertarget{funkcijosClass_8h_afd90dbbe81fd95d528b7f16ab14e12df}\label{funkcijosClass_8h_afd90dbbe81fd95d528b7f16ab14e12df} 
+void {\bfseries Ivesti\+Pazymius} (\mbox{\hyperlink{structStudentas}{Studentas}} \&stud)
+\item 
+{\footnotesize template$<$typename Container $>$ }\\void \mbox{\hyperlink{funkcijosClass_8h_a8a155a34f350b836aa2aef1eaf452eeb}{Rikiuoti\+Studentus\+\_\+paz}} (Container \&studentai)
+\begin{DoxyCompactList}\small\item\em Rikiuoja studentus pagal pažymius. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Container $>$ }\\void \mbox{\hyperlink{funkcijosClass_8h_a607d2748ae9fc098b6cadf4e7aee45a0}{Rikiuoti\+Studentus\+\_\+vardas}} (Container \&studentai)
+\begin{DoxyCompactList}\small\item\em Rikiuoja studentus pagal vardą \end{DoxyCompactList}\item 
+\Hypertarget{funkcijosClass_8h_aa7615cf05ea659c84efcfb546adbf87a}\label{funkcijosClass_8h_aa7615cf05ea659c84efcfb546adbf87a} 
+{\footnotesize template$<$typename Container $>$ }\\void {\bfseries nuskaityti\+Is\+Failo} (Container \&studentai, const string \&failo\+Vardas)
+\item 
+{\footnotesize template$<$typename Container $>$ }\\void \mbox{\hyperlink{funkcijosClass_8h_ac19682976b50332b4ce81ea4f4b4e3b4}{Outas\+\_\+i\+\_\+faila}} (const Container \&studentai)
+\begin{DoxyCompactList}\small\item\em Išvedimo funkcija į vieną failą fiksuotu formatu. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Container $>$ }\\void \mbox{\hyperlink{funkcijosClass_8h_a0d119f52fc3dff1d5ad1b042eeec0805}{Outas\+\_\+i\+\_\+console}} (const Container \&studentai)
+\begin{DoxyCompactList}\small\item\em Išvedimo funkcija į konsolę fiksuotu formatu išveda studentų duomenis. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Container $>$ }\\void \mbox{\hyperlink{funkcijosClass_8h_ae7571c47bd34de80d19758776816bf40}{Outas\+\_\+i\+\_\+du\+\_\+failus}} (const Container \&zem\+\_\+lyg, const Container \&aukst\+\_\+lyg, const std\+::string \&varg\+\_\+file="{}vargsiukai.\+txt"{}, const std\+::string \&kiet\+\_\+file="{}kietiakai.\+txt"{})
+\begin{DoxyCompactList}\small\item\em Išvedimo funkcija į du failus fiksuotu formatu, išveda studentų duomenis į du atskirus failus. \end{DoxyCompactList}\item 
+\Hypertarget{funkcijosClass_8h_a6dfa84b32c03c52b27ad26bb013ca22e}\label{funkcijosClass_8h_a6dfa84b32c03c52b27ad26bb013ca22e} 
+{\footnotesize template$<$typename Container $>$ }\\void {\bfseries Outas\+\_\+i\+\_\+du\+\_\+failus\+\_\+strat\+\_\+2} (const Container \&zem\+\_\+lyg, const Container \&studentai, const std\+::string \&varg\+\_\+file="{}vargsiukai.\+txt"{}, const std\+::string \&kiet\+\_\+file="{}kietiakai.\+txt"{})
+\item 
+{\footnotesize template$<$typename Container $>$ }\\void \mbox{\hyperlink{funkcijosClass_8h_ad88943a3314ab42aebe5f6fa486e3048}{skirstymas\+\_\+pagal\+\_\+paz}} (Container studentai, Container \&zem\+\_\+lyg, Container \&aukst\+\_\+lyg)
+\begin{DoxyCompactList}\small\item\em Skirsto studentus į dvi grupes pagal galutinį vidurkį \end{DoxyCompactList}\item 
+\Hypertarget{funkcijosClass_8h_a91cead5bc82b32fb7a791903f67d3dc2}\label{funkcijosClass_8h_a91cead5bc82b32fb7a791903f67d3dc2} 
+{\footnotesize template$<$typename Container $>$ }\\void {\bfseries skirstymas\+\_\+pagal\+\_\+paz\+\_\+2\+\_\+strat} (Container \&studentai, Container \&zem\+\_\+lyg)
+\item 
+{\footnotesize template$<$typename Container $>$ }\\void \mbox{\hyperlink{funkcijosClass_8h_a1a7d383f31bd110e05477c9ed7a1e0e4}{Rikiavimas\+\_\+output}} (int sort\+\_\+type, Container \&studentai)
+\begin{DoxyCompactList}\small\item\em Rikiuoja studentus pagal pasirinkimą\+: vardas arba pažymiai. \end{DoxyCompactList}\item 
+\Hypertarget{funkcijosClass_8h_a3ca59651436a1d8332a894c7c9553c91}\label{funkcijosClass_8h_a3ca59651436a1d8332a894c7c9553c91} 
+{\footnotesize template$<$typename Container $>$ }\\void {\bfseries handle\+\_\+output} (int i\+\_\+faila, int iskyrimas, int strat, const Container \&main\+\_\+container, const Container \&zem\+\_\+container, const Container \&aukst\+\_\+container)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Pagalbinės funkcijos studentų pažymių valdymo sistemai class versijai. 
+
+\begin{DoxyAuthor}{Author}
+Naglis 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2025-\/12-\/11
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2025 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{funkcijosClass_8h_a0d119f52fc3dff1d5ad1b042eeec0805}\label{funkcijosClass_8h_a0d119f52fc3dff1d5ad1b042eeec0805} 
+\index{funkcijosClass.h@{funkcijosClass.h}!Outas\_i\_console@{Outas\_i\_console}}
+\index{Outas\_i\_console@{Outas\_i\_console}!funkcijosClass.h@{funkcijosClass.h}}
+\doxysubsubsection{\texorpdfstring{Outas\_i\_console()}{Outas\_i\_console()}}
+{\footnotesize\ttfamily template$<$typename Container $>$ \\
+void Outas\+\_\+i\+\_\+console (\begin{DoxyParamCaption}\item[{const Container \&}]{studentai }\end{DoxyParamCaption})}
+
+
+
+Išvedimo funkcija į konsolę fiksuotu formatu išveda studentų duomenis. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Container} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em studentai} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{funkcijosClass_8h_ae7571c47bd34de80d19758776816bf40}\label{funkcijosClass_8h_ae7571c47bd34de80d19758776816bf40} 
+\index{funkcijosClass.h@{funkcijosClass.h}!Outas\_i\_du\_failus@{Outas\_i\_du\_failus}}
+\index{Outas\_i\_du\_failus@{Outas\_i\_du\_failus}!funkcijosClass.h@{funkcijosClass.h}}
+\doxysubsubsection{\texorpdfstring{Outas\_i\_du\_failus()}{Outas\_i\_du\_failus()}}
+{\footnotesize\ttfamily template$<$typename Container $>$ \\
+void Outas\+\_\+i\+\_\+du\+\_\+failus (\begin{DoxyParamCaption}\item[{const Container \&}]{zem\+\_\+lyg,  }\item[{const Container \&}]{aukst\+\_\+lyg,  }\item[{const std\+::string \&}]{varg\+\_\+file = {\ttfamily "{}vargsiukai.txt"{}},  }\item[{const std\+::string \&}]{kiet\+\_\+file = {\ttfamily "{}kietiakai.txt"{}} }\end{DoxyParamCaption})}
+
+
+
+Išvedimo funkcija į du failus fiksuotu formatu, išveda studentų duomenis į du atskirus failus. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Container} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em zem\+\_\+lyg} & Studentai, kurių vidurkis mažesnis nei 5.\+0 \\
+\hline
+{\em aukst\+\_\+lyg} & Studentai, kurių vidurkis lygus arba didesnis nei 5.\+0 \\
+\hline
+{\em varg\+\_\+file} & failas į kurį išvedami neišlaikę studentai \\
+\hline
+{\em kiet\+\_\+file} & failas į kurį išvedami išlaikę studentai \\
+\hline
+\end{DoxyParams}
+\Hypertarget{funkcijosClass_8h_ac19682976b50332b4ce81ea4f4b4e3b4}\label{funkcijosClass_8h_ac19682976b50332b4ce81ea4f4b4e3b4} 
+\index{funkcijosClass.h@{funkcijosClass.h}!Outas\_i\_faila@{Outas\_i\_faila}}
+\index{Outas\_i\_faila@{Outas\_i\_faila}!funkcijosClass.h@{funkcijosClass.h}}
+\doxysubsubsection{\texorpdfstring{Outas\_i\_faila()}{Outas\_i\_faila()}}
+{\footnotesize\ttfamily template$<$typename Container $>$ \\
+void Outas\+\_\+i\+\_\+faila (\begin{DoxyParamCaption}\item[{const Container \&}]{studentai }\end{DoxyParamCaption})}
+
+
+
+Išvedimo funkcija į vieną failą fiksuotu formatu. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Container} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em studentai} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{funkcijosClass_8h_a1a7d383f31bd110e05477c9ed7a1e0e4}\label{funkcijosClass_8h_a1a7d383f31bd110e05477c9ed7a1e0e4} 
+\index{funkcijosClass.h@{funkcijosClass.h}!Rikiavimas\_output@{Rikiavimas\_output}}
+\index{Rikiavimas\_output@{Rikiavimas\_output}!funkcijosClass.h@{funkcijosClass.h}}
+\doxysubsubsection{\texorpdfstring{Rikiavimas\_output()}{Rikiavimas\_output()}}
+{\footnotesize\ttfamily template$<$typename Container $>$ \\
+void Rikiavimas\+\_\+output (\begin{DoxyParamCaption}\item[{int}]{sort\+\_\+type,  }\item[{Container \&}]{studentai }\end{DoxyParamCaption})}
+
+
+
+Rikiuoja studentus pagal pasirinkimą\+: vardas arba pažymiai. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Container} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em sort\+\_\+type} & \\
+\hline
+{\em studentai} & \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 2
+\Hypertarget{funkcijosClass_8h_a8a155a34f350b836aa2aef1eaf452eeb}\label{funkcijosClass_8h_a8a155a34f350b836aa2aef1eaf452eeb} 
+\index{funkcijosClass.h@{funkcijosClass.h}!RikiuotiStudentus\_paz@{RikiuotiStudentus\_paz}}
+\index{RikiuotiStudentus\_paz@{RikiuotiStudentus\_paz}!funkcijosClass.h@{funkcijosClass.h}}
+\doxysubsubsection{\texorpdfstring{RikiuotiStudentus\_paz()}{RikiuotiStudentus\_paz()}}
+{\footnotesize\ttfamily template$<$typename Container $>$ \\
+void Rikiuoti\+Studentus\+\_\+paz (\begin{DoxyParamCaption}\item[{Container \&}]{studentai }\end{DoxyParamCaption})}
+
+
+
+Rikiuoja studentus pagal pažymius. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Container} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em studentai} & \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+% FIG 3
+\Hypertarget{funkcijosClass_8h_a607d2748ae9fc098b6cadf4e7aee45a0}\label{funkcijosClass_8h_a607d2748ae9fc098b6cadf4e7aee45a0} 
+\index{funkcijosClass.h@{funkcijosClass.h}!RikiuotiStudentus\_vardas@{RikiuotiStudentus\_vardas}}
+\index{RikiuotiStudentus\_vardas@{RikiuotiStudentus\_vardas}!funkcijosClass.h@{funkcijosClass.h}}
+\doxysubsubsection{\texorpdfstring{RikiuotiStudentus\_vardas()}{RikiuotiStudentus\_vardas()}}
+{\footnotesize\ttfamily template$<$typename Container $>$ \\
+void Rikiuoti\+Studentus\+\_\+vardas (\begin{DoxyParamCaption}\item[{Container \&}]{studentai }\end{DoxyParamCaption})}
+
+
+
+Rikiuoja studentus pagal vardą 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Container} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em studentai} & \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+% FIG 4
+\Hypertarget{funkcijosClass_8h_ad88943a3314ab42aebe5f6fa486e3048}\label{funkcijosClass_8h_ad88943a3314ab42aebe5f6fa486e3048} 
+\index{funkcijosClass.h@{funkcijosClass.h}!skirstymas\_pagal\_paz@{skirstymas\_pagal\_paz}}
+\index{skirstymas\_pagal\_paz@{skirstymas\_pagal\_paz}!funkcijosClass.h@{funkcijosClass.h}}
+\doxysubsubsection{\texorpdfstring{skirstymas\_pagal\_paz()}{skirstymas\_pagal\_paz()}}
+{\footnotesize\ttfamily template$<$typename Container $>$ \\
+void skirstymas\+\_\+pagal\+\_\+paz (\begin{DoxyParamCaption}\item[{Container}]{studentai,  }\item[{Container \&}]{zem\+\_\+lyg,  }\item[{Container \&}]{aukst\+\_\+lyg }\end{DoxyParamCaption})}
+
+
+
+Skirsto studentus į dvi grupes pagal galutinį vidurkį 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Container} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em studentai} & vectorius su studentais \\
+\hline
+{\em zem\+\_\+lyg} & vectorius, į kurį bus įdėti studentai su žemu vidurkiu \\
+\hline
+{\em aukst\+\_\+lyg} & vectorius, į kurį bus įdėti studentai su aukštu vidurkiu \\
+\hline
+\end{DoxyParams}

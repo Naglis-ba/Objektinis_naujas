@@ -1,0 +1,124 @@
+\doxysection{/home/nagli/\+Objektinis\+\_\+naujas/\+Objektinis/src\+Class/main\+Class.cpp File Reference}
+\hypertarget{mainClass_8cpp}{}\label{mainClass_8cpp}\index{/home/nagli/Objektinis\_naujas/Objektinis/srcClass/mainClass.cpp@{/home/nagli/Objektinis\_naujas/Objektinis/srcClass/mainClass.cpp}}
+
+
+Pagrindinė programa studentų pažymių valdymo sistemai class versijai.  
+
+
+{\ttfamily \#include "{}studentas\+Class.\+h"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$limits$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$list$>$}\newline
+{\ttfamily \#include "{}funkcijos\+Class.\+h"{}}\newline
+Include dependency graph for main\+Class.\+cpp\+:
+% FIG 0
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{mainClass_8cpp_a52f529aa87a83f8499f064fa2994d9c5}{Suvedimas}} (vector$<$ \mbox{\hyperlink{structStudentas}{Studentas}} $>$ \&Studentu\+\_\+sarasas)
+\begin{DoxyCompactList}\small\item\em Suvedimo funkcija, kuri leidžia įvesti studentų duomenis rankiniu būdu arba nuskaityti iš failo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{mainClass_8cpp_a569b88207017fcbbf0df45f30fb6e2c2}{Rikiavimas}} (vector$<$ \mbox{\hyperlink{structStudentas}{Studentas}} $>$ \&Studentu\+\_\+sarasas)
+\begin{DoxyCompactList}\small\item\em Kviečia funkciją, kuri rikiuoja studentus pagal vartotojo pasirinkimą \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{mainClass_8cpp_a128ebbce6b083215c2993009539f7c9f}{Skirstymas}} (vector$<$ \mbox{\hyperlink{structStudentas}{Studentas}} $>$ \&Studentu\+\_\+sarasas, vector$<$ \mbox{\hyperlink{structStudentas}{Studentas}} $>$ \&zem\+\_\+lyg, vector$<$ \mbox{\hyperlink{structStudentas}{Studentas}} $>$ \&aukst\+\_\+lyg)
+\begin{DoxyCompactList}\small\item\em Skirstymo funkcija, kuri pagal vartotojo pasirinkimą išskiria išlaikiusius ir neišlaikiusius studentus. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{mainClass_8cpp_a204126277ab7f1bf523ea6d56940ddd4}{Isvedimas}} (const vector$<$ \mbox{\hyperlink{structStudentas}{Studentas}} $>$ Studentu\+\_\+sarasas, const vector$<$ \mbox{\hyperlink{structStudentas}{Studentas}} $>$ zem\+\_\+lyg, const vector$<$ \mbox{\hyperlink{structStudentas}{Studentas}} $>$ aukst\+\_\+lyg)
+\begin{DoxyCompactList}\small\item\em Išvedimo funkcija, kuri pagal vartotojo pasirinkimą išveda duomenis į failą arba konsolę \end{DoxyCompactList}\item 
+\Hypertarget{mainClass_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{mainClass_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+int {\bfseries main} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Pagrindinė programa studentų pažymių valdymo sistemai class versijai. 
+
+\begin{DoxyAuthor}{Author}
+Naglis 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2025-\/12-\/11
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2025 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{mainClass_8cpp_a204126277ab7f1bf523ea6d56940ddd4}\label{mainClass_8cpp_a204126277ab7f1bf523ea6d56940ddd4} 
+\index{mainClass.cpp@{mainClass.cpp}!Isvedimas@{Isvedimas}}
+\index{Isvedimas@{Isvedimas}!mainClass.cpp@{mainClass.cpp}}
+\doxysubsubsection{\texorpdfstring{Isvedimas()}{Isvedimas()}}
+{\footnotesize\ttfamily void Isvedimas (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{structStudentas}{Studentas}} $>$}]{Studentu\+\_\+sarasas,  }\item[{const vector$<$ \mbox{\hyperlink{structStudentas}{Studentas}} $>$}]{zem\+\_\+lyg,  }\item[{const vector$<$ \mbox{\hyperlink{structStudentas}{Studentas}} $>$}]{aukst\+\_\+lyg }\end{DoxyParamCaption})}
+
+
+
+Išvedimo funkcija, kuri pagal vartotojo pasirinkimą išveda duomenis į failą arba konsolę 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Studentu\+\_\+sarasas} & \\
+\hline
+{\em zem\+\_\+lyg} & \\
+\hline
+{\em aukst\+\_\+lyg} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{mainClass_8cpp_a569b88207017fcbbf0df45f30fb6e2c2}\label{mainClass_8cpp_a569b88207017fcbbf0df45f30fb6e2c2} 
+\index{mainClass.cpp@{mainClass.cpp}!Rikiavimas@{Rikiavimas}}
+\index{Rikiavimas@{Rikiavimas}!mainClass.cpp@{mainClass.cpp}}
+\doxysubsubsection{\texorpdfstring{Rikiavimas()}{Rikiavimas()}}
+{\footnotesize\ttfamily void Rikiavimas (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{structStudentas}{Studentas}} $>$ \&}]{Studentu\+\_\+sarasas }\end{DoxyParamCaption})}
+
+
+
+Kviečia funkciją, kuri rikiuoja studentus pagal vartotojo pasirinkimą 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Studentu\+\_\+sarasas} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{mainClass_8cpp_a128ebbce6b083215c2993009539f7c9f}\label{mainClass_8cpp_a128ebbce6b083215c2993009539f7c9f} 
+\index{mainClass.cpp@{mainClass.cpp}!Skirstymas@{Skirstymas}}
+\index{Skirstymas@{Skirstymas}!mainClass.cpp@{mainClass.cpp}}
+\doxysubsubsection{\texorpdfstring{Skirstymas()}{Skirstymas()}}
+{\footnotesize\ttfamily void Skirstymas (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{structStudentas}{Studentas}} $>$ \&}]{Studentu\+\_\+sarasas,  }\item[{vector$<$ \mbox{\hyperlink{structStudentas}{Studentas}} $>$ \&}]{zem\+\_\+lyg,  }\item[{vector$<$ \mbox{\hyperlink{structStudentas}{Studentas}} $>$ \&}]{aukst\+\_\+lyg }\end{DoxyParamCaption})}
+
+
+
+Skirstymo funkcija, kuri pagal vartotojo pasirinkimą išskiria išlaikiusius ir neišlaikiusius studentus. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Studentu\+\_\+sarasas} & \\
+\hline
+{\em zem\+\_\+lyg} & \\
+\hline
+{\em aukst\+\_\+lyg} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{mainClass_8cpp_a52f529aa87a83f8499f064fa2994d9c5}\label{mainClass_8cpp_a52f529aa87a83f8499f064fa2994d9c5} 
+\index{mainClass.cpp@{mainClass.cpp}!Suvedimas@{Suvedimas}}
+\index{Suvedimas@{Suvedimas}!mainClass.cpp@{mainClass.cpp}}
+\doxysubsubsection{\texorpdfstring{Suvedimas()}{Suvedimas()}}
+{\footnotesize\ttfamily void Suvedimas (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{structStudentas}{Studentas}} $>$ \&}]{Studentu\+\_\+sarasas }\end{DoxyParamCaption})}
+
+
+
+Suvedimo funkcija, kuri leidžia įvesti studentų duomenis rankiniu būdu arba nuskaityti iš failo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Studentu\+\_\+sarasas} & \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 1

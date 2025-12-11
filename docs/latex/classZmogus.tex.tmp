@@ -1,0 +1,45 @@
+\doxysection{Zmogus Class Reference}
+\hypertarget{classZmogus}{}\label{classZmogus}\index{Zmogus@{Zmogus}}
+
+
+Inheritance diagram for Zmogus\+:
+% FIG 0
+
+
+Collaboration diagram for Zmogus\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classZmogus_aa71e29088c1bdc2707cfffdc4b956ee0}\label{classZmogus_aa71e29088c1bdc2707cfffdc4b956ee0} 
+{\bfseries Zmogus} (const std\+::string \&vardas="{}"{}, const std\+::string \&pavarde="{}"{})
+\item 
+\Hypertarget{classZmogus_afc4e5d24e0a934a4741dcc43e03618e8}\label{classZmogus_afc4e5d24e0a934a4741dcc43e03618e8} 
+virtual void {\bfseries Print\+Info} () const =0
+\item 
+\Hypertarget{classZmogus_a9e6cbe50ad5e2e037af5460ccac2ca95}\label{classZmogus_a9e6cbe50ad5e2e037af5460ccac2ca95} 
+virtual std\+::string {\bfseries Get\+Vardas} () const
+\item 
+\Hypertarget{classZmogus_a3a65d694004b3738d4f15e40ce9018e8}\label{classZmogus_a3a65d694004b3738d4f15e40ce9018e8} 
+virtual std\+::string {\bfseries Get\+Pavarde} () const
+\item 
+\Hypertarget{classZmogus_a7493ce0906e94416e260bc167e923ac7}\label{classZmogus_a7493ce0906e94416e260bc167e923ac7} 
+virtual void {\bfseries Set\+Vardas} (const std\+::string \&vardas)
+\item 
+\Hypertarget{classZmogus_afae348ab3f37ac8ae990d802b1e627c1}\label{classZmogus_afae348ab3f37ac8ae990d802b1e627c1} 
+virtual void {\bfseries Set\+Pavarde} (const std\+::string \&pavarde)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classZmogus_a80e72cd553492344884a264a72ce33d2}\label{classZmogus_a80e72cd553492344884a264a72ce33d2} 
+std\+::string {\bfseries vardas\+\_\+}
+\item 
+\Hypertarget{classZmogus_a85cd6103a5f887059263d15413a3f081}\label{classZmogus_a85cd6103a5f887059263d15413a3f081} 
+std\+::string {\bfseries pavarde\+\_\+}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/nagli/\+Objektinis\+\_\+naujas/\+Objektinis/include\+Class/\mbox{\hyperlink{zmogus_8h}{zmogus.\+h}}\end{DoxyCompactItemize}
