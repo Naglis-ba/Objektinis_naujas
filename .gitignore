@@ -1,0 +1,25 @@
+# CMake build directories
+out/
+build/
+CMakeCache.txt
+CMakeFiles/
+
+# Visual Studio
+.vs/
+*.vcxproj*
+*.sln
+
+# Executables
+*.exe
+*.dll
+*.pdb
+*.ilk
+
+# Inno Setup output
+*.iss.bak
+*.log
+dist/
+
+# OS junk
+Thumbs.db
+.DS_Store
